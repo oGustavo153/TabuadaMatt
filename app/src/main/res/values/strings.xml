@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Tabuada</string>
+    <string name="presentation">Olá, eu sou o Matt, e estou aqui para lhe ensinar Matemática! Aqui veremos desde o básico, até o mais avançado! Vamos lá!</string>
+    <string name="descItem">Clique para ver a teoria deste tema e seus exercicios!</string>
+    <string name="teoriaTabuada">\nA tabuada é um tópico muito importante para aprendermos, pois iremos usar lá na frente de diversas maneiras.\n
+Seu conceito é bem simples, é só pensar "quantas vezes alguma coisa foi feita?". Por exemplo:\n
+João comprou 2 vezes 2 brinquedos. Isso fica 2x2, que é 4!
+\nPara facilitar, podemos usar a soma:\n
+Se João comprou 2 vezes 3 brinquedos, somamos 3 vezes o 2, que dá 2+2+2, que é 6!\n</string>
+    <string name="builder_message">Tendo isso em vista, preparado para fazer alguns exercícios?</string>
+    <string name="builder_title">Vamos lá?</string>
+</resources>

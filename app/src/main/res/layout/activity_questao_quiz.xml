@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".QuizActivity"
+    android:background="@drawable/background_matt">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="14dp">
+
+        <LinearLayout
+            android:id="@+id/pb_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/alt_default_design"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:gravity="center_vertical">
+
+            <ProgressBar
+                android:id="@+id/pb_Questao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="10"
+                android:progress="0"
+                android:minHeight="50dp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:indeterminate="false"/>
+
+            <TextView
+                android:id="@+id/txt_Progresso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                tools:text="0/10"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_Questao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:text="teste"
+            android:background="@drawable/alt_default_design"
+            android:padding="4dp"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/img_Questao"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:src="@drawable/questao_seis3"
+            android:layout_margin="20dp" />
+        
+        <TextView
+            android:id="@+id/txt_AltUm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/grey"
+            tools:text="2"
+            android:background="@drawable/alt_default_design"/>
+
+        <TextView
+            android:id="@+id/txt_AltDois"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/grey"
+            tools:text="4"
+            android:background="@drawable/alt_default_design"/>
+
+        <TextView
+            android:id="@+id/txt_AltTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/grey"
+            tools:text="8"
+            android:background="@drawable/alt_default_design"/>
+
+        <TextView
+            android:id="@+id/txt_AltQuatro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/grey"
+            tools:text="22"
+            android:background="@drawable/alt_default_design"/>
+
+        <Button
+            android:id="@+id/btn_Responder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/blue"
+            android:text="Responder"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
