@@ -1,7 +1,9 @@
 package com.gusztavo.tabuada
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_congrats.*
@@ -37,5 +39,10 @@ class CongratsActivity : NomeActivity() {
             txtNome.text = "$NOME, você é GENIAL!"
             txtAcertos.text = "Você acertou TODAS as questões!"
         }
+    }
+    fun voltar(view: View){
+        val intent = Intent(this, OpcaoActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

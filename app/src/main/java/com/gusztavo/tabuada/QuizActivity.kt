@@ -3,6 +3,7 @@ package com.gusztavo.tabuada
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -18,6 +19,7 @@ open class QuizActivity : NomeActivity(), View.OnClickListener{
     private var questaoLista: ArrayList<Questao>? = null
     private var altSelecionada: Int = 0 //vamos usar isso para checar se a questao selecionada foi correta ou nao
     private var questoesErradas: ArrayList<Questao>? = null
+    lateinit var mp: MediaPlayer
     var count = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -145,14 +147,19 @@ open class QuizActivity : NomeActivity(), View.OnClickListener{
                     val questao = questaoLista!![posicaoAtual - 1]
                     if (questao.altCorreta != altSelecionada) {
                         altRespostaDesign(altSelecionada, R.drawable.alt_errada_design)
-
-                        //Adicionar as questões erradas para "questoesErradas"
+                        /*//Adicionar as questões erradas para "questoesErradas"
                         questoesErradas?.add(questao)
-                        Log.v("Errou a questão: ", questao.toString())
+                        Log.v("Errou a questão: ", questao.toString())*/
+                        mp = MediaPlayer.create(this, R.raw.answer_wrong)
+                        mp.start()
 
 
                     } else {
                         altRespostaDesign(questao.altCorreta, R.drawable.alt_correta_design)
+                        //Som emitido ao acertar a questão
+                        mp = MediaPlayer.create(this, R.raw.answer_correct)
+                        mp.start()
+
                         count++
                     }
                     txt_AltUm.setOnClickListener(null)
