@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_matt"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:fillViewport="true"
+    tools:context=".QuizActivity">
+
+    <!-- Barra de progresso -->
+    <LinearLayout
+        android:id="@+id/pb_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@drawable/alt_default_design"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp">
+
+        <ProgressBar
+            android:id="@+id/pb_Questao"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:indeterminate="false"
+            android:max="10"
+            android:minHeight="50dp"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/txt_Progresso"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="14sp"
+            tools:text="0/10" />
+
+    </LinearLayout>
+
+    <!-- Imagem e Questão -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_Questao"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/alt_default_design"
+            android:gravity="center"
+            android:padding="4dp"
+            android:layout_margin="6dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:text="Rita fez 95 travessas de barrinha de cereal, com 35 barrinhas em cada travessa. Ela distribuiu 1.100 barrinhas para os vizinhos experimentarem. Quantas barrinhas sobraram?" />
+
+        <ImageView
+            android:id="@+id/img_Questao"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="2sp"
+            android:src="@drawable/questao_oito"
+            tools:layout_editor_absoluteX="34dp" />
+
+    </LinearLayout>
+
+    <!-- Pergunta -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_AltUm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/alt_default_design"
+            android:gravity="center"
+            android:padding="6dp"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            tools:text="2" />
+
+        <TextView
+            android:id="@+id/txt_AltDois"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/alt_default_design"
+            android:gravity="center"
+            android:padding="6dp"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            tools:text="4" />
+
+        <TextView
+            android:id="@+id/txt_AltTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/alt_default_design"
+            android:gravity="center"
+            android:padding="6dp"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            tools:text="8" />
+
+        <TextView
+            android:id="@+id/txt_AltQuatro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/alt_default_design"
+            android:gravity="center"
+            android:padding="6dp"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            tools:text="22" />
+
+        <Button
+            android:id="@+id/btn_Responder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:backgroundTint="@color/blue"
+            android:text="Responder"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
