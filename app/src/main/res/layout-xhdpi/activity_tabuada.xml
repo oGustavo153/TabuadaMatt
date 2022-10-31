@@ -33,6 +33,30 @@
             android:background="@drawable/icon_lousa"/>
 
         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnPrevious"
+                android:layout_width="64dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="150dp"
+                android:background="@drawable/ic_previous_16x14"
+                android:onClick="onClickPrevious"/>
+
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="64dp"
+                android:layout_height="56dp"
+                android:background="@drawable/ic_next_16x14"
+                android:onClick="onClickNext" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="4dp"
@@ -41,17 +65,9 @@
 
             <ImageView
                 android:id="@+id/matt_handup"
-                android:layout_width="120dp"
-                android:layout_height="250dp"
+                android:layout_width="100dp"
+                android:layout_height="230dp"
                 android:src="@drawable/matt_handup"/>
-
-            <ImageView
-                android:id="@+id/img_next"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="14dp"
-                android:src="@drawable/icon_next_16x16"
-                />
 
         </LinearLayout>
 

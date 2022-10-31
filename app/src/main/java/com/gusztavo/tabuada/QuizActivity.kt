@@ -147,9 +147,12 @@ open class QuizActivity : NomeActivity(), View.OnClickListener{
                     val questao = questaoLista!![posicaoAtual - 1]
                     if (questao.altCorreta != altSelecionada) {
                         altRespostaDesign(altSelecionada, R.drawable.alt_errada_design)
-                        /*//Adicionar as questões erradas para "questoesErradas"
+
+                        //Adicionar as questões erradas para "questoesErradas"
                         questoesErradas?.add(questao)
-                        Log.v("Errou a questão: ", questao.toString())*/
+                        Log.v("Errou a questão: ", questao.toString())
+
+                        //Som emitido ao errar a questão
                         mp = MediaPlayer.create(this, R.raw.answer_wrong)
                         mp.start()
 
@@ -178,7 +181,6 @@ open class QuizActivity : NomeActivity(), View.OnClickListener{
                     //Essa parte do código só irá acontecer, caso altSelecionada = 0, como mostra na linha 108
                     //Quando for 0 (linha 133), a posiçãoAtual vai aumentar +1, ou seja, vai para a próxima questão
                 }
-
             }
         }
     }

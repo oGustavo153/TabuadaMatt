@@ -10,8 +10,14 @@ object Explicacoes {
         val e1 = Explicacao("\nA tabuada é um tópico muito importante para aprendermos, pois iremos usar lá na frente de diversas maneiras.\nSeu conceito é bem simples, é só pensar ''quantas vezes alguma coisa foi feita?''. Por exemplo:\nJoão comprou 2 vezes 2 brinquedos. Isso fica 2x2, que é 4!\nPara facilitar, podemos usar a soma:\nSe João comprou 2 vezes 3 brinquedos, somamos 3 vezes o 2, que dá 2+2+2, que é 6!\n")
         explicacaoLista.add(e1)
 
-        val e2 = Explicacao("\nbla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla \n")
+        val e2 = Explicacao("\nPágina 2 \n")
         explicacaoLista.add(e2)
+
+        val e3 = Explicacao("\nPágina 3 \n")
+        explicacaoLista.add(e3)
+
+        val e4 = Explicacao("\nPágina 4 \n")
+        explicacaoLista.add(e4)
 
 
         return explicacaoLista

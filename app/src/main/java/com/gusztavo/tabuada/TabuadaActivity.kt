@@ -2,24 +2,17 @@ package com.gusztavo.tabuada
 
 import android.content.DialogInterface
 import android.content.Intent
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
 import android.view.View
-import android.view.animation.AnimationUtils
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextSwitcher
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.bumptech.glide.Glide
 import com.gusztavo.tabuada.util.Explicacao
 import com.gusztavo.tabuada.util.Explicacoes
-import com.gusztavo.tabuada.util.Questao
 import kotlinx.android.synthetic.main.activity_tabuada.*
 
-class TabuadaActivity : AppCompatActivity(), View.OnClickListener {
+class TabuadaActivity : AppCompatActivity(){
 
     lateinit var txt_Explicacao: TextView
     private var explicacaoAtual: Int = 1//Qual explicação está aparecendo
@@ -33,8 +26,6 @@ class TabuadaActivity : AppCompatActivity(), View.OnClickListener {
         txt_Explicacao = findViewById(R.id.txt_Explicacao)
         setExplicacao()
 
-        img_next.setOnClickListener(this)
-
         Glide.with(this)
             .load(R.drawable.matt_handup)
             .into(findViewById(R.id.matt_handup))
@@ -46,12 +37,27 @@ class TabuadaActivity : AppCompatActivity(), View.OnClickListener {
         txt_Explicacao.text = explicacao!!.texto
     }
 
-    override fun onClick(v: View){
-        explicacaoAtual++
-        when {
-            explicacaoAtual <= explicacaoLista!!.size -> {
-                setExplicacao()
-            }
+    fun onClickNext(view: View){
+        btnPrevious.isClickable = true
+        if (explicacaoAtual < explicacaoLista!!.size){
+            btnNext.isClickable = true
+            explicacaoAtual++
+            setExplicacao()
+        }
+        else{
+            btnNext.isClickable = false
+        }
+    }
+
+    fun onClickPrevious(view: View){
+        btnNext.isClickable = true
+        if (explicacaoAtual > 1){
+            btnPrevious.isClickable = true
+            explicacaoAtual--
+            setExplicacao()
+        }
+        else{
+            btnPrevious.isClickable = false
         }
     }
 
